@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "193256632688",
+    "project_id": "chatyyu-68523",
+    "storage_bucket": "chatyyu-68523.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193256632688:android:f3e10b9d72c4a689e5f8d3",
+        "android_client_info": {
+          "package_name": "com.hayoparty.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193256632688-a9x4m7v21q8b5t6k3p0d5hfsjnr7wvc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hayoparty.chat",
+            "certificate_hash": "a3f9e1b2d4c5e6f7a8b9c0d1e2f3a4b5c6d7e8f9"
+          }
+        },
+        {
+          "client_id": "193256632688-8kkdilpprk85dekqirkloeikdk52dhlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW_BRZpE1tbTA9X2f995MGjTYA8qZ9_LY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193256632688-2pdrcookk95drikclykelsckdpc523k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

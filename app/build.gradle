@@ -1,0 +1,70 @@
+import groovy.json.JsonSlurper
+
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.example.gradlenetworkdemo"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.youtubedemo"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        pickFirst  'META-INF/*'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+}
+
+//// 定义复制任务
+//tasks.register("copyConfigTask", Copy) {
+//    from rootProject.file("configs") // 源目录：项目根目录的 config 目录
+//    into project(":app").file("/") // 目标目录：app 模块的 assets 目录
+//    include("*.json") // 只复制 JSON 文件（如果想复制所有文件可去掉）
+//
+//    doLast {
+//        println "Config files copied successfully to: ${project(":app").file("src/main/assets")}"
+//        // 读取项目根目录下的 config.json 文件
+//        def jsonFile = file("test.json")
+//
+//        // 解析 JSON
+//        def jsonSlurper = new JsonSlurper()
+//        def jsonData = jsonSlurper.parse(jsonFile)
+//
+//        println "value1: ${jsonData.key1}"
+//
+//        throw new IllegalStateException("非常错误")
+//    }
+//}
+//
+//// 确保复制任务在 preBuild 之前执行
+//tasks.named("preBuild").configure {
+//    dependsOn copyConfigTask
+//}
