@@ -91,12 +91,21 @@ try {
 /**
  * 判断文件是否存在
  */
-println "=============================> isExists: ${isFileOrDirectoryExists("configs1")}"
+println "=============================> isExists: ${isFileExists("configs/google-services.json")}"
 
 boolean isFileOrDirectoryExists(String path) {
     def folder = new File(path)
 
     if (folder.exists() && folder.isDirectory()) {
+        return true
+    }
+    return false
+}
+
+boolean isFileExists(String path) {
+    def file = new File(path)
+
+    if (file.exists()) {
         return true
     }
     return false
